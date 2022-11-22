@@ -41,142 +41,142 @@ const Find_Five = (N) =>
       </pre>
 
 
-  <h2>Eligible Voter</h2>
+  <h2>Find Sum</h2>
   <h3>You are given an integer
-    A, denoting the age of a person, and your task is to determine whether he/she is eligible to vote or not.</h3>
+    You are given an integer 
+    N
+    , and your task is to find the sum of all the even integers starting from 
+    1
+     upto 
+    N
+     (
+    N
+     inclusive).</h3>
   <pre>
-const isEligible = (a) => {
-  if(a>=18){
-    return "Eligible for Voting";
-  }
-  else{
-    return "Not Eligible for Voting"}
-};  </pre>
-  <h2>Find Relation</h2>
-  <h3>PrepBuddy wants you to get familiar with various Relational operators. He provides you with two integer values X and Y and asks you to find the relation between them.The relationships between integers X and Y are as follows:
 
-    If X< Y , it means that X is smaller than Y .
-     If X>Y, it means that X is greater than Y.
-      If X = Y , it means that X is equal to Y .</h3>
-  <pre>
-    const findRelation = (x,y) => {
-      if(x < y){
-        return (x + " is smaller than " + y)
-      }
-      else if(x>y){
-        return (x + " is greater than " + y)
-      }
-     else if(x==y){
-       return ( x + " is equal to  " +y)
-     }
+    const findSum = (n) => {
+      let even=0;
+  for(let i=1; i <= n; i++){
+    if(i%2===0){
+      even=even+i;
+    }
+  }
+  return even;
+      
   };
+  
+};  </pre>
+  <h2>Find the sum of the digits of a given number</h2>
+  <h3>Write a program that takes a number from the user and get the sum of the digits present in the number</h3>
+  <pre>
+  
+const Number_Sum = (N) => 
+{
+	let sum=0;
+while(N>0){
+  r=N%10
+  sum=sum+r
+  N=parseInt(N/10)
+}
+return sum
+};
+
+
 </pre>
-<h2>Find Grades</h2>
+<h2>Print the Odds</h2>
   <h3>
-    Your school has the following grading system based upon the marks(M) obtained by a student.
-    <ul>
-      <li>If M≤10, the grade will be  E</li>
-      <li>If  11 ≥ M ≤ 20 , the grade will be  D </li>
-      <li>If  21 ≥ M ≤ 30 , the grade will be  C</li>
-      <li>If  31 ≥ M ≤ 40 , the grade will be  B</li>
-      <li>If  41 ≥ M ≤ 50 , the grade will be  A</li>
-    </ul>
+    Write a program which takes  a number from user and print all odd numbers in between 2 and N, but print 2 first
   </h3>
   <pre>
-    const findGrades = (a) => {
-      if(a<=10){
-        return "E";
-      }
-       else if(a>=11 && a<=20){
-        return "D";
-      }
-      else if(a>=21 && a<=30){
-        return "C";
-      }
-      else if(a>=31 && a<=40){
-        return "B";
-      }
-      else if(a>=41 && a<=50){
-        return "A";
-      }
-     };
-</pre>
-<h2>Get Value</h2>
-  <h3>You are provided with a table containing some characters and their corresponding values. Your task will be to find the value from the table corresponding to an input character and return it</h3>
-<pre style="background-color:rgba(131, 124, 24,0.2); color:black">
-| P or p 	- PrepBytes      	|
-| Z or z 	- Zenith         	|
-| E or e 	- Expert Coder   	|
-| D or d 	- Data Structure 	|
-</pre>
-
-  <pre>
-    const getValue = (a) => {
-  
-      if(a ==="P" || a ==="p"){
-        return "PrepBytes"
-      }
-      else if(a ==="Z" || a ==="z"){
-        return "Zenith"
-      }
-      else if(a ==="E" || a ==="e"){
-        return "Expert Coder"
-      }
-      else if(a ==="D" || a ==="d"){
-        return "Data Structure"
-      }
-      
-    };
-  </pre>
-  <h2>Find the maximum out of three numbers</h2>
-  <h3>Take three numbers and print the largest number among them if all of three are same print   − 1
     
-  
+const Print_Odd = (N) => 
+ 
+{
+  console.log(2)
+  for(i=3; i<=N; i=i+2){
+    console.log(i)
+  }
+
+};
+
+
+</pre>
+<h2>Print the Pattern.</h2>
+  <h3>Write a program which ask user for no of lines and print a pattern using an asterik .
+</h3>
+
 
   <pre>
-    const Max_out_of_three = (A,B,C) => {
-      if(A>B&&A>C) {
-        return (A)
-      }
-      else if(B>C&B>A){
-        return (B)
-      }
-      else if(C>A&&C>B){
-        return (C)
-      }
-      else if(C==A&&C==B){
-        return (-1);
-      }
-   };   
+    
+const Print_pattern = (N) => 
+{
+  let str = " ";
+ for(let i=0; i<=N; i++){
+   for(let j=1; j<=i;j++){
+    str = str+"*"
+   }
+   str += "\n";
+ }
+ console.log(str);
+};
+
+
+  </pre>
+  <h2>Check whether a Number is a prime or not</h2>
+  <h3>Write a program which takes  a number from user and check whether number is prime number or not a prime number</h3>
+  <pre>
+ 
+const Prime_Check = (N) => 
+{ 
+  var flag=true;
+  if(N<=1)
+  {return "NO";
+  }
+  else if(N>1){
+	  for(var i=2;i<=N-1;i++){
+	     if(N%i===0){
+	     flag=false;
+	     break;
+	     }
+	   }
+	 }
+
+if(flag===true)
+return "YES";
+else
+return "NO";
+}
+ 
     </pre>
-<h2>Second Smallest</h2>
-<h3>You are given 3 distinct integers  X , Y ,  and  Z ,  and your task is to find and return the second smallest integer among the three provided integers.</h3>      
+<h2>Print Numbers</h2>
+<h3>You are given an integer 
+  N
+  , and your task is to print all the integers starting from 
+  1
+   till 
+  N
+   (
+  N
+   inclusive)</h3>      
 
 <pre>
-
-  const findSndSmallest = (x,y,z) => {
-    if(x < y && z>y && x < z){
-     return y;
-   }
-   else if(x < z && y > z && x > y){
-     return z;
-   }
-   else {return x}
-   };
-   
-   
+  const printNumbers = (n) => {
+    for (i=1; i<=n; i++){
+      console.log(i)
+    }
+};
 
 </pre>
-<h2>Check whether the triangle is Acute or Obtuse</h2>
-<h3>Write a program takes takes three angles and checks whether the triangle is acute or obtuse</h3>
-   <pre>
-    const Triangle_Check = (A,B,C) => {
-      if(A < 90 && B < 90 && C < 90)
-      return "acute";
-      else{
-      return "obtuse"; 
-      } 
-    };    
+<h2>Print the Table</h2>
+<h3>Write a program which takes a number from user and print the table.</h3>
+   <pre>  
+const Print_Table = (N) => 
+{
+	for(let i=1; i<=10; i++){
+	  console.log(`${N} * ${i} = ${N*i}`)
+	}
+};
+
    </pre>
 </body>
 </html>
