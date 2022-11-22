@@ -12,7 +12,6 @@
   <h2>Find the number of digits</h2>
   <h3>Take a number from the user and print the count of digits in that number</h3>
   <pre>
-    
 const Find_Digits = (N) => 
 { 
   let count=0;
@@ -23,20 +22,22 @@ const Find_Digits = (N) =>
   }
 return count;
 	}
-
-
-    
  </pre>
-  <h2>Check whether the condition is fulfilled or not?</h2>
-  <h3>Write a program that takes a number and prints whether the number is divisible by 6 and 9 or not</h3>
+  <h2>Find the Fives</h2>
+  <h3>Among all the digits from 0−9, PrepBuddy likes number 5. He has a number and wants you to find out the number of times 5 occurred in the given number</h3>
   <pre>
-    const Check_divisibility = (N) => {
-      if(N%6===0 && N%9===0){
-        return "Divisible by both";
-      }
-    else{return "Not Divisible by both"
-    }
-    };
+const Find_Five = (N) => 
+{
+	 let count=0;
+	 while( N > 0){
+	   let P= N%10;
+	   if(p===5){
+	     count++;
+	   }
+	   N= parseInt(N/10)
+	 }
+	 return count
+};
       </pre>
 
 
